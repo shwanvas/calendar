@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="codewithcal.au.calendarappexample">
+    package="practice.shwanvas.calendar">
 
     <application
         android:allowBackup="true"
@@ -9,21 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CalendarAppExample">
-        <activity android:name="codewithcal.au.calendar.EventEditActivity"></activity>
-        <activity android:name="codewithcal.au.calendar.WeekViewActivity" />
-        <activity android:name="codewithcal.au.calendar.MainActivity">
+        <activity android:name="practice.shwanvas.calendar.EventEditActivity"></activity>
+        <activity android:name="practice.shwanvas.calendar.WeekViewActivity" />
+        <activity android:name="practice.shwanvas.calendar.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="codewithcal.au.calendar.NotificationView"
+        <activity android:name="practice.shwanvas.calendar.NotificationView"
             android:label="Details of notification"
-            android:parentActivityName="codewithcal.au.calendar.MainActivity">
+            android:parentActivityName="practice.shwanvas.calendar.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="codewithcal.au.calendar.MainActivity"/>
+                android:value="practice.shwanvas.calendar.MainActivity"/>
         </activity>
     </application>
 

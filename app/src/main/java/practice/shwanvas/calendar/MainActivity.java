@@ -1,13 +1,10 @@
 package practice.shwanvas.calendar;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.NotificationCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +14,7 @@ import android.widget.Toast;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-import codewithcal.au.calendarappexample.R;
+
 
 public class MainActivity extends AppCompatActivity implements CalendarAdapter.OnItemListener
 {
@@ -73,24 +70,9 @@ public class MainActivity extends AppCompatActivity implements CalendarAdapter.O
             setMonthView();
             String message = "Selected Date: " + date ;
             Toast.makeText(this, message, Toast.LENGTH_LONG).show();
-            addNotification(message);
+            //addNotification(message);
         }
 
-    }
-    private void addNotification(String message) {
-        NotificationCompat.Builder builder =
-                new NotificationCompat.Builder(this)
-                        .setContentTitle("Notifications Example")
-                        .setContentText(message);
-
-        Intent notificationIntent = new Intent(this, NotificationView.class);
-        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent,
-                PendingIntent.FLAG_UPDATE_CURRENT);
-        builder.setContentIntent(contentIntent);
-
-        // Add as notification
-        NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        manager.notify(0, builder.build());
     }
 
         public void weeklyAction(View view)

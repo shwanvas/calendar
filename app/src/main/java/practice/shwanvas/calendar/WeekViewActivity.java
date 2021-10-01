@@ -9,11 +9,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-import codewithcal.au.calendarappexample.R;
 
 public class WeekViewActivity extends AppCompatActivity implements CalendarAdapter.OnItemListener
 {
@@ -63,10 +63,17 @@ public class WeekViewActivity extends AppCompatActivity implements CalendarAdapt
     }
 
     @Override
-    public void onItemClick(int position, LocalDate date)
-    {
+    public void onItemClick(int position, LocalDate date) {
         CalendarUtils.selectedDate = date;
         setWeekView();
+        if (date != null) {
+            CalendarUtils.selectedDate = date;
+            setWeekView();
+            String message = "Selected Date: " + date;
+            Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+            //addNotification(message);
+
+        }
     }
 
     @Override

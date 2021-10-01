@@ -11,7 +11,6 @@ import androidx.annotation.Nullable;
 
 import java.util.List;
 
-import codewithcal.au.calendarappexample.R;
 
 public class EventAdapter extends ArrayAdapter<Event>
 {

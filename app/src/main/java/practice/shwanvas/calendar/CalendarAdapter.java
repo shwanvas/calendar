@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-import codewithcal.au.calendarappexample.R;
 
 class CalendarAdapter extends RecyclerView.Adapter<CalendarViewHolder>
 {
